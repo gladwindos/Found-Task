@@ -19,7 +19,7 @@ function initMap() {
             const toVal = inputTo.value;
 
             // Check both fields filled
-            if (fromVal === "" || toVal === "") {
+            if (!fromVal || !toVal) {
                 distanceResult.innerText = 'Please fill in both fields.'
             } else {
                 // Distance request
