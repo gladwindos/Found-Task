@@ -36,21 +36,19 @@ function initMap() {
 
                         console.log(response);
 
-                        const result = response.rows[0].elements[0]
+                        const result = response.rows[0].elements[0];
 
                         const origin = response.originAddresses[0];
                         const destination = response.destinationAddresses[0];
 
                         if (result.status !== 'OK') {
-                            distanceResult.innerText = 'The distance could not be found! Please try again...'
+                            distanceResult.innerText = 'The distance could not be found! Please try again...';
                             resetButton.style.display = 'inline-block';
                         } else {
                             const distanceKm = Math.round(result.distance.value / 1000);
-                            const distanceMiles = parseInt(distanceKm * 0.621371)
-                            const duration = result.duration.text;
+                            const distanceMiles = parseInt(distanceKm * 0.621371);
 
-                            distanceResult.innerText = `The distance between ${origin} and ${destination} is ${distanceKm} km or ${distanceMiles} miles. 
-                            This will take ${duration} by car.`;
+                            distanceResult.innerText = `The distance between ${origin} and ${destination} is ${distanceKm} km or ${distanceMiles} miles.`;
                             resetButton.style.display = 'inline-block';
                         }
                     }
@@ -59,9 +57,9 @@ function initMap() {
         });
         // Reset fields and result
         $('#reset-button').click(function () {
-            inputFrom.value = ""
-            inputTo.value = ""
-            distanceResult.innerText = ""
+            inputFrom.value = "";
+            inputTo.value = "";
+            distanceResult.innerText = "";
             resetButton.style.display = 'none';
         });
     });
