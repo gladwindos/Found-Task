@@ -1,0 +1,78 @@
+html, body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#my-nav {
+    padding-left: 6em;
+    padding-right: 5em;
+    text-align: center;
+    background-color: white !important;
+}
+
+.navbar-brand > h4 {
+    font-weight: 800;
+}
+
+.nav-item {
+    color: black !important;
+}
+
+.nav-item:hover {
+    color: #00C6C0 !important;
+}
+
+#my-header {
+    padding-bottom: 0;
+    padding-top: 7em;
+    margin-bottom: 0.5em;
+    background-image: url('railroad-tracks.jpg');
+}
+
+#my-header h1 {
+    margin-bottom: 0;
+    line-height: 80%;
+    color: white;
+    font-weight: 800;
+}
+
+#content-1 * {
+    font-weight: 800;
+}
+
+#my-footer {
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+
+#my-footer h1 {
+    font-weight: 800;
+}
+
+#form-section {
+    text-align: center;
+    background-color: #00C6C0;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+
+#form-section input {
+    text-overflow: ellipsis;
+}
+
+#distance-result {
+    padding-top: 1em;
+}
+
+#reset-button {
+    display: none;
+}
